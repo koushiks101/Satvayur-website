@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satvayur Extracts Limited</title>
+    <meta name="description" content="Satvayur Extracts Limited - Public Limited Company. Prime industrial land for sale at KIADB Industrial Estate, Chikkaballapura, Karnataka.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-dark: #1a6e2e;
+            --green-mid: #2d8f45;
+            --green-light: #4caf50;
+            --green-pale: #e8f5e9;
+            --green-bg: #f1f8e9;
+            --text-dark: #212121;
+            --text-mid: #424242;
+            --text-light: #616161;
+            --white: #ffffff;
+            --gray-light: #f5f5f5;
+            --gray-border: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            z-index: 1000;
+            padding: 0.8rem 0;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            height: 40px;
+        }
+
+        .nav-logo-text {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--green-dark);
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-mid);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--green-dark);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text-dark);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 8rem 1.5rem 4rem;
+            background: linear-gradient(135deg, var(--green-pale) 0%, var(--white) 50%, var(--green-bg) 100%);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--green-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .cin {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 400;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero .company-type {
+            font-size: 0.95rem;
+            color: var(--green-mid);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-mid);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: var(--green-dark);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .hero-cta:hover {
+            background: var(--green-mid);
+            transform: translateY(-1px);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 1.5rem;
+        }
+
+        .section-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--green-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-line {
+            width: 50px;
+            height: 3px;
+            background: var(--green-light);
+            margin-bottom: 2rem;
+            border-radius: 2px;
+        }
+
+        /* About */
+        .about {
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .about-item {
+            padding: 1.2rem;
+            background: var(--gray-light);
+            border-radius: 8px;
+            border-left: 3px solid var(--green-light);
+        }
+
+        .about-item .label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.3rem;
+        }
+
+        .about-item .value {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        /* Directors */
+        .directors {
+            background: var(--green-bg);
+        }
+
+        .director-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .director-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .director-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .director-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--green-pale);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--green-dark);
+        }
+
+        .director-card h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .director-card .designation {
+            font-size: 0.82rem;
+            color: var(--green-mid);
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+        }
+
+        .director-card .din {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-bottom: 0.8rem;
+        }
+
+        .director-card .bio {
+            font-size: 0.85rem;
+            color: var(--text-mid);
+            line-height: 1.5;
+        }
+
+        .director-card .appointed {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 0.8rem;
+        }
+
+        /* Land */
+        .land {
+            background: var(--white);
+        }
+
+        .land-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .land-details {
+            background: var(--gray-light);
+            border-radius: 10px;
+            padding: 2rem;
+        }
+
+        .land-details h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--green-dark);
+            margin-bottom: 1rem;
+        }
+
+        .land-detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.7rem 0;
+            border-bottom: 1px solid var(--gray-border);
+            font-size: 0.9rem;
+        }
+
+        .land-detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .land-detail-row .label {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .land-detail-row .value {
+            color: var(--text-dark);
+            font-weight: 600;
+            text-align: right;
+            max-width: 55%;
+        }
+
+        .land-highlights {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .land-highlight {
+            background: var(--green-pale);
+            border-radius: 10px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .land-highlight-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--green-dark);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .land-highlight h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.2rem;
+        }
+
+        .land-highlight p {
+            font-size: 0.82rem;
+            color: var(--text-mid);
+        }
+
+        .land-price {
+            margin-top: 1.5rem;
+            padding: 1.2rem;
+            background: var(--green-dark);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .land-price p {
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .land-price a {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
+        /* Map */
+        .map-container {
+            margin-top: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+
+        /* Contact */
+        .contact {
+            background: var(--green-bg);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        .contact-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--green-dark);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item .label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-item .value {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+
+        .contact-item a {
+            color: var(--green-dark);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .contact-form h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--green-dark);
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--text-mid);
+            margin-bottom: 0.3rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid var(--gray-border);
+            border-radius: 6px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.88rem;
+            outline: none;
+            transition: border 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--green-light);
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--green-dark);
+            color: var(--white);
+            border: none;
+            border-radius: 6px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form-submit:hover {
+            background: var(--green-mid);
+        }
+
+        /* Statutory */
+        .statutory {
+            background: var(--white);
+            padding: 3rem 1.5rem;
+        }
+
+        .statutory-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .statutory-note {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: rgba(255,255,255,0.7);
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        footer .company-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 0.3rem;
+        }
+
+        footer .cin {
+            font-size: 0.78rem;
+            margin-bottom: 0.3rem;
+        }
+
+        footer .address {
+            font-size: 0.78rem;
+            margin-bottom: 1rem;
+        }
+
+        footer .copyright {
+            font-size: 0.72rem;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 1rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem 1.5rem;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .director-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .land-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <!-- Replace src with actual logo file path when hosting -->
+                <span class="nav-logo-text">satvayur</span>
+            </a>
+            <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#directors">Directors</a></li>
+                <li><a href="#land">Land for Sale</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#statutory">Compliance</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Satvayur Extracts Limited</h1>
+            <p class="cin">CIN: U15495TN1997PLC181817</p>
+            <p class="company-type">Public Limited Company &middot; Incorporated 1997</p>
+            <p>A public limited company with prime industrial land available for sale in Karnataka's KIADB Industrial Estate.</p>
+            <a href="#land" class="hero-cta">View Land Details</a>
+        </div>
+    </section>
+
+    <!-- About / Corporate Information -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <h2 class="section-title">Corporate Information</h2>
+            <div class="section-line"></div>
+            <div class="about-grid">
+                <div class="about-item">
+                    <div class="label">Company Name</div>
+                    <div class="value">Satvayur Extracts Limited</div>
+                </div>
+                <div class="about-item">
+                    <div class="label">CIN</div>
+                    <div class="value">U15495TN1997PLC181817</div>
+                </div>
+                <div class="about-item">
+                    <div class="label">Company Type</div>
+                    <div class="value">Public Limited Company</div>
+                </div>
+                <div class="about-item">
+                    <div class="label">Date of Incorporation</div>
+                    <div class="value">1997</div>
+                </div>
+                <div class="about-item">
+                    <div class="label">Registered Office</div>
+                    <div class="value">No. 25/3, Nathamuni Street, T Nagar, Chennai &ndash; 600017, Tamil Nadu, India</div>
+                </div>
+                <div class="about-item">
+                    <div class="label">Authorized Capital</div>
+                    <div class="value">&rupee;9,00,00,000 (90,00,000 equity shares of &rupee;10 each)</div>
+                </div>
+                <div class="about-item">
+                    <div class="label">Paid-up Capital</div>
+                    <div class="value">&rupee;8,95,47,720 (89,54,772 equity shares of &rupee;10 each)</div>
+                </div>
+                <div class="about-item">
+                    <div class="label">Email</div>
+                    <div class="value"><a href="mailto:ravikumar@satvayur.com">ravikumar@satvayur.com</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Directors -->
+    <section class="directors" id="directors">
+        <div class="section-container">
+            <h2 class="section-title">Board of Directors</h2>
+            <div class="section-line"></div>
+            <div class="director-cards">
+                <div class="director-card">
+                    <div class="director-avatar">KS</div>
+                    <h3>Koushik Sekhar</h3>
+                    <p class="designation">Whole-time Director</p>
+                    <p class="din">DIN: 00410700</p>
+                    <p class="bio">Promoter. Alumnus of IIT Madras and IIM Ahmedabad. Investments across multiple listed and unlisted ventures.</p>
+                    <p class="appointed">Appointed: 03 June 2010</p>
+                </div>
+                <div class="director-card">
+                    <div class="director-avatar">GP</div>
+                    <h3>Geeta Prakash</h3>
+                    <p class="designation">Director</p>
+                    <p class="din">DIN: 00410511</p>
+                    <p class="bio">Entrepreneur. Alumnus of College of Engineering, Pune and IIM Ahmedabad.</p>
+                    <p class="appointed">Appointed: 16 November 2010</p>
+                </div>
+                <div class="director-card">
+                    <div class="director-avatar">VS</div>
+                    <h3>Vijaya Sekhar</h3>
+                    <p class="designation">Director</p>
+                    <p class="din">DIN: 01860493</p>
+                    <p class="bio">Business &amp; Investments.</p>
+                    <p class="appointed">Appointed: 23 January 2020</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Land for Sale -->
+    <section class="land" id="land">
+        <div class="section-container">
+            <h2 class="section-title">Industrial Land for Sale</h2>
+            <div class="section-line"></div>
+            <div class="land-content">
+                <div class="land-details">
+                    <h3>Plot Details</h3>
+                    <div class="land-detail-row">
+                        <span class="label">Plot No.</span>
+                        <span class="value">39, KIADB Industrial Area</span>
+                    </div>
+                    <div class="land-detail-row">
+                        <span class="label">Survey Nos.</span>
+                        <span class="value">135, 138 &amp; 139</span>
+                    </div>
+                    <div class="land-detail-row">
+                        <span class="label">Village</span>
+                        <span class="value">Kandavara Village, Nandi Hobli</span>
+                    </div>
+                    <div class="land-detail-row">
+                        <span class="label">Taluk &amp; District</span>
+                        <span class="value">Chikkaballapura</span>
+                    </div>
+                    <div class="land-detail-row">
+                        <span class="label">State</span>
+                        <span class="value">Karnataka</span>
+                    </div>
+                    <div class="land-detail-row">
+                        <span class="label">PIN Code</span>
+                        <span class="value">562101</span>
+                    </div>
+                    <div class="land-detail-row">
+                        <span class="label">Total Area</span>
+                        <span class="value">8,224.00 Sq. Mtrs (~2.03 Acres)</span>
+                    </div>
+                    <div class="land-detail-row">
+                        <span class="label">Land Type</span>
+                        <span class="value">Free Hold Prime Industrial Land (KIADB Allotted)</span>
+                    </div>
+                </div>
+                <div class="land-highlights">
+                    <div class="land-highlight">
+                        <div class="land-highlight-icon">&#9962;</div>
+                        <div>
+                            <h4>KIADB Industrial Estate</h4>
+                            <p>Government-allotted industrial land with clear title and proper zoning. No conversion hassles.</p>
+                        </div>
+                    </div>
+                    <div class="land-highlight">
+                        <div class="land-highlight-icon">&#9776;</div>
+                        <div>
+                            <h4>State Highway Access</h4>
+                            <p>Just 50 metres from a divided State Highway. Excellent road connectivity for logistics.</p>
+                        </div>
+                    </div>
+                    <div class="land-highlight">
+                        <div class="land-highlight-icon">&#8644;</div>
+                        <div>
+                            <h4>National Highway Proximity</h4>
+                            <p>Only 3 km from the National Highway. Well-connected for interstate transport.</p>
+                        </div>
+                    </div>
+                    <div class="land-highlight">
+                        <div class="land-highlight-icon">&#9737;</div>
+                        <div>
+                            <h4>Near Nandi Hills &amp; Bengaluru</h4>
+                            <p>Located in Nandi Hobli, approximately 60 km from Bengaluru. Rapidly developing industrial corridor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15536.0!2d77.73!3d13.43!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb1e4a2e3f1d7a1%3A0x1234567890abcdef!2sKIADB%20Industrial%20Area%2C%20Chikkaballapura!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Plot Location - KIADB Industrial Area, Chikkaballapura">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="section-line"></div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">&#9742;</div>
+                        <div>
+                            <div class="label">Phone / Fax</div>
+                            <div class="value"><a href="tel:+918156263076">+91-8156-263076</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">&#9993;</div>
+                        <div>
+                            <div class="label">Email</div>
+                            <div class="value"><a href="mailto:ravikumar@satvayur.com">ravikumar@satvayur.com</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">&#9873;</div>
+                        <div>
+                            <div class="label">Registered Office</div>
+                            <div class="value">No. 25/3, Nathamuni Street,<br>T Nagar, Chennai &ndash; 600017,<br>Tamil Nadu, India</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">&#9881;</div>
+                        <div>
+                            <div class="label">WhatsApp</div>
+                            <div class="value"><a href="https://wa.me/918156263076" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: var(--white); border-radius: 10px; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                    <p style="font-size: 0.92rem; color: var(--text-dark); line-height: 1.7;">
+                        For enquiry about property, please write to
+                        <a href="mailto:ravikumar@satvayur.com" style="color: var(--green-dark); font-weight: 500;">ravikumar@satvayur.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statutory Disclosures -->
+    <section class="statutory" id="statutory">
+        <div class="statutory-content">
+            <h2 class="section-title">Statutory Disclosures</h2>
+            <div class="section-line"></div>
+            <p class="statutory-note">
+                As a Public Limited Company, Satvayur Extracts Limited is committed to statutory compliance under the Companies Act, 2013.
+                Annual Returns (Form MGT-7) and Financial Statements are filed with the Registrar of Companies, Tamil Nadu, and are available for public inspection on the
+                <a href="https://www.mca.gov.in" target="_blank" rel="noopener" style="color: var(--green-dark);">MCA Portal</a>.
+            </p>
+            <p class="statutory-note" style="margin-top: 0.8rem;">
+                For copies of Annual Returns or Financial Statements, please write to
+                <a href="mailto:ravikumar@satvayur.com" style="color: var(--green-dark); font-weight: 500;">ravikumar@satvayur.com</a>
+                with your Name, Email, DP ID / Client ID or Folio No.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p class="company-name">Satvayur Extracts Limited</p>
+            <p class="cin">CIN: U15495TN1997PLC181817 &middot; Public Limited Company</p>
+            <p class="address">Registered Office: No. 25/3, Nathamuni Street, T Nagar, Chennai &ndash; 600017, Tamil Nadu, India</p>
+            <p class="copyright">&copy; 2025 Satvayur Extracts Limited. All rights reserved. &middot; Last updated: March 2026</p>
+        </div>
+    </footer>
+
+</body>
+</html>
